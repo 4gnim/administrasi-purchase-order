@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyek simulasi administrasi purchase order dan monitoring penerimaan barang menggunakan Microsoft Excel.">
+  <title>Administrasi Purchase Order & Monitoring Penerimaan Barang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">PORTOFOLIO ADMINISTRASI & OPERASIONAL</p>
+        <h1>Administrasi Purchase Order &amp; Monitoring Penerimaan Barang</h1>
+        <p class="lead">Simulasi pekerjaan administrasi operasional menggunakan Microsoft Excel untuk pencatatan, pemeriksaan, monitoring penerimaan, dan penyusunan laporan Purchase Order.</p>
+        <div class="tags">
+          <span>Microsoft Excel</span>
+          <span>Data Validation</span>
+          <span>Operational Reporting</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="metric"><span>Total PO</span><strong>18.000</strong></div>
+        <div class="metric"><span>Persentase Penerimaan</span><strong>92%</strong></div>
+        <div class="metric"><span>PO Terlambat</span><strong>13.311</strong></div>
+        <p class="note">Angka diambil dari workbook hasil proyek dan digunakan sebagai ringkasan monitoring.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">TUJUAN</p>
+          <h2>Simulasi alur kerja administrasi yang berbasis data</h2>
+          <p>Proyek ini dibuat untuk mensimulasikan pekerjaan administrasi purchase order: menerima data, memeriksa konsistensi, menambahkan informasi monitoring, kemudian menyusun ringkasan operasional yang mudah dibaca.</p>
+        </div>
+        <div class="flow-card">
+          <div class="flow-step"><b>01</b><span>Data mentah</span></div>
+          <div class="arrow">↓</div>
+          <div class="flow-step"><b>02</b><span>Pemeriksaan &amp; validasi</span></div>
+          <div class="arrow">↓</div>
+          <div class="flow-step"><b>03</b><span>Monitoring PO</span></div>
+          <div class="arrow">↓</div>
+          <div class="flow-step"><b>04</b><span>Laporan operasional</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted">
+      <div class="container">
+        <p class="eyebrow">PROSES</p>
+        <h2>Pengolahan di Microsoft Excel</h2>
+        <div class="cards">
+          <article class="card"><h3>Data mentah</h3><p>Menjaga data awal tetap utuh sebagai sumber sebelum pengolahan.</p></article>
+          <article class="card"><h3>Kolom monitoring</h3><p>Menghitung outstanding quantity, receiving percentage, selisih hari penerimaan, serta status monitoring.</p></article>
+          <article class="card"><h3>Validasi</h3><p>Memisahkan status received, partial, open, dan cancelled agar seluruh PO terklasifikasi.</p></article>
+          <article class="card"><h3>Pelaporan</h3><p>Menyusun KPI dan daftar PO yang perlu diperhatikan untuk kebutuhan operasional.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">HASIL</p>
+        <h2>Laporan monitoring</h2>
+        <div class="result-grid">
+          <div class="result-box"><span>PO Selesai</span><strong>15.801</strong></div>
+          <div class="result-box"><span>Sebagian Diterima</span><strong>1.326</strong></div>
+          <div class="result-box"><span>Belum Diterima</span><strong>467</strong></div>
+          <div class="result-box"><span>Dibatalkan</span><strong>406</strong></div>
+        </div>
+        <p class="caption">Empat kategori tersebut mencakup seluruh 18.000 Purchase Order pada data yang digunakan.</p>
+      </div>
+    </section>
+
+    <section class="section muted">
+      <div class="container gallery">
+        <div class="gallery-item">
+          <div class="gallery-text"><p class="eyebrow">01</p><h3>Data Mentah</h3><p>Data Purchase Order sebelum kolom monitoring ditambahkan.</p></div>
+          <img src="screenshots/raw-data.png" alt="Screenshot data mentah Purchase Order di Excel" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-text"><p class="eyebrow">02</p><h3>Monitoring PO</h3><p>Kolom outstanding, receiving percentage, delivery variance, dan status monitoring.</p></div>
+          <img src="screenshots/monitoring.png" alt="Screenshot monitoring Purchase Order di Excel" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-text"><p class="eyebrow">03</p><h3>Laporan Operasional</h3><p>Ringkasan KPI, status Purchase Order, dan tabel monitoring.</p></div>
+          <img src="screenshots/laporan.png" alt="Screenshot laporan monitoring Purchase Order di Excel" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">TEKNIS</p>
+          <h2>Rumus Excel yang digunakan</h2>
+          <div class="code-list">
+            <code>=K2-L2</code><span>menghitung jumlah yang belum diterima</span>
+            <code>=IFERROR(L2/K2;0)</code><span>menghitung persentase penerimaan</span>
+            <code>=D2-C2</code><span>menghitung selisih hari antara actual dan expected receipt</span>
+            <code>=COUNTIF(...)</code><span>menghitung jumlah PO berdasarkan status</span>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">CATATAN DATA</p>
+          <h2>Dataset sintetis</h2>
+          <p>Dataset yang digunakan merupakan data sintetis untuk kebutuhan pendidikan dan pengujian. Proyek ini tidak dimaksudkan sebagai representasi perusahaan nyata atau benchmark industri.</p>
+          <p class="source">Sumber: Analytics Engineering — Inventory &amp; Supply Chain Dataset, versi 1.0.0, CC BY 4.0.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Agni Musadad · Portofolio Administrasi</span>
+      <span>Microsoft Excel · Purchase Order Monitoring</span>
+    </div>
+  </footer>
+</body>
+</html>
